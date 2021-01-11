@@ -11,3 +11,5 @@ foreach ($url in $RefreshDSURL)
   #prints url into console 
   Write-Host $url
 }
+While (Get-Job -State "Running") { Start-Sleep 1 }
+Write-Output "All jobs successfully ran" 
